@@ -63,3 +63,13 @@ app.get('/listapikey', (req, res) => {
     apikeys: rows
   })
 })
+
+// Route index
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+})
+
+// Menyalakan server
+app.listen(port, () => {
+  console.log(`🚀 Server aktif! Buka http://localhost:${port}`)
+})
